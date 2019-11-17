@@ -1,4 +1,18 @@
 * {
+    box-sizing: border-box;
+}
+
+.no-space,
+.grid {
     padding: 0;
-    margin: 0;
+    overflow: hidden;
+}
+
+.grid img {
+    max-width: 100%;
+    transition: 2s;
+}
+
+.grid:hover img {
+    transform: scale(1.2);
 }
