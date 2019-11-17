@@ -10,9 +10,41 @@
 
 .grid img {
     max-width: 100%;
-    transition: 2s;
+    transition: 7s;
+}
+
+.carousel img {
+    max-width: 100%;
 }
 
 .grid:hover img {
     transform: scale(1.2);
+}
+
+.caption {
+    position: absolute;
+    font-family: Roboto;
+    top: 20%;
+    left: 10%;
+    right: 10%;
+    color: white;
+}
+
+.caption h1 {
+    font-family: 'BebasNeueRegular';
+}
+
+.caption::before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 5px;
+    top: -10%;
+    background: white;
+}
+
+.arrow {
+    color: white;
+    float: right;
+    font-size: 3em;
 }
