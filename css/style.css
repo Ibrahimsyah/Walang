@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
 }
-
 .no-space,
 .grid {
     padding: 0;
@@ -33,6 +32,7 @@
 
 .caption h1 {
     font-family: 'BebasNeueRegular';
+    font-size: 2em
 }
 
 .caption::before {
