@@ -1,8 +1,8 @@
 * {
     box-sizing: border-box;
 }
-.no-space,
-.grid {
+
+.no-space, .grid {
     padding: 0;
     overflow: hidden;
 }
@@ -48,4 +48,41 @@
     color: white;
     float: right;
     font-size: 3em;
+}
+
+#event {
+    background: #e6e6e6;
+    padding-top: 2em;
+}
+
+.card {
+    margin: 5px;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.katevent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: roboto;
+}
+
+.tgl-event {
+    color: red;
+}
+
+.card-body {
+    padding-bottom: .5em;
+}
+
+.event-desc {
+    padding-top: 0;
 }
