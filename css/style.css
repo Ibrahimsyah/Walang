@@ -2,6 +2,60 @@
     box-sizing: border-box;
 }
 
+/* CSS WAHYU */
+
+.navbar {
+    font-family: 'Alatsi', sans-serif;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+a.navbar-brand {
+    font-size: 25px;
+    margin-left: 50px;
+}
+
+a.nav-item {
+    font-size: 17px;
+    margin-right: 30px;
+}
+
+.navbar-nav {
+    margin-right: 20px;
+}
+
+.jumbotron {
+    height: 100vh;
+    background-image: url("../images/BGjumbo.jpg");
+    margin-bottom: 0;
+}
+
+.container-wahyu {
+    padding-top: 30vh;
+    text-align: center;
+}
+
+.container-wahyu h1 {
+    text-transform: uppercase;
+    font-family: 'Alatsi', sans-serif;
+    font-size: 70px;
+    color: #fff;
+    cursor: default;
+}
+
+.container-wahyu p {
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+.container-wahyu button {
+    margin-top: 30px;
+}
+
+/* END CSS WAHYU */
+
 .no-space, .grid {
     padding: 0;
     overflow: hidden;
@@ -57,6 +111,7 @@
 
 .card {
     margin: 5px;
+    cursor: pointer;
 }
 
 .card-img-top {
@@ -88,7 +143,7 @@
 }
 
 @media (min-width: 576px) {
-    .card-columns{
+    .card-columns {
         column-count: 2;
     }
 }

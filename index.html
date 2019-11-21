@@ -19,6 +19,26 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">walang</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="#grid-alam">wisata <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#kuliner">kuliner</a>
+                <a class="nav-item nav-link" href="#about">tentang</a>
+                <a class="nav-item nav-link" href="#event">event</a>
+            </div>
+        </div>
+    </nav>
+    <section id="header">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-wahyu">
+                <h1>selamat datang di malang</h1>
+                <p>Lorem ipsum dolor sit amet</p>
+                <button type="button" class="btn-jelajah btn btn-primary">Jelajahi</button>
+            </div>
+        </div>
+    </section>
     <section id="grid-alam">
         <div class="container-fluid">
             <div class="row">
@@ -140,7 +160,7 @@
                             </div>
 
                         </div>
-                        <div class="collapse">
+                        <div class="collapse collapse-ibra">
                             <div class="card-body event-desc">
                                 <p class="card-text">Unit Pengembangan Karir dan Kewirausahaan Universitas Brawijaya
                                     kembali akan mengadakan Job Fair.</p>
@@ -158,7 +178,7 @@
                             </div>
 
                         </div>
-                        <div class="collapse">
+                        <div class="collapse collapse-ibra">
                             <div class="card-body event-desc">
                                 <p class="card-text">Memeringati Sumpah Pemuda, Mitreka Baca SMA Negeri 1 Malang
                                     mempersembahkan Bulan Bahasa 2019 : Berinovasi dan Berprestasi melalui Karya
@@ -177,7 +197,7 @@
                             </div>
 
                         </div>
-                        <div class="collapse">
+                        <div class="collapse collapse-ibra">
                             <div class="card-body event-desc">
                                 <p class="card-text">Get Ready To Be Wealthy merupakan acara workshop, seminar, dan
                                     talkshow berskala nasional yang bertemakan tentang kewirausahaan dan ditujukan
@@ -196,7 +216,7 @@
                             </div>
 
                         </div>
-                        <div class="collapse">
+                        <div class="collapse collapse-ibra">
                             <div class="card-body event-desc">
                                 <p class="card-text">Golden Star Dance Crew featuring Transmart Departement Store
                                     present “Hit The Stage with Golden Star” Dance Cover Competition.</p>
@@ -213,7 +233,7 @@
                             </div>
 
                         </div>
-                        <div class="collapse">
+                        <div class="collapse collapse-ibra">
                             <div class="card-body event-desc">
                                 <p class="card-text">Unit Pengembangan Karir dan Kewirausahaan Universitas Brawijaya
                                     kembali akan mengadakan Job Fair.</p>
@@ -230,7 +250,7 @@
                             </div>
 
                         </div>
-                        <div class="collapse">
+                        <div class="collapse collapse-ibra">
                             <div class="card-body event-desc">
                                 <p class="card-text">Memeringati Sumpah Pemuda, Mitreka Baca SMA Negeri 1 Malang
                                     mempersembahkan Bulan Bahasa 2019 : Berinovasi dan Berprestasi melalui Karya
@@ -248,7 +268,7 @@
                             </div>
 
                         </div>
-                        <div class="collapse">
+                        <div class="collapse collapse-ibra">
                             <div class="card-body event-desc">
                                 <p class="card-text">Get Ready To Be Wealthy merupakan acara workshop, seminar, dan
                                     talkshow berskala nasional yang bertemakan tentang kewirausahaan dan ditujukan
@@ -266,7 +286,7 @@
                             </div>
 
                         </div>
-                        <div class="collapse">
+                        <div class="collapse collapse-ibra">
                             <div class="card-body event-desc">
                                 <p class="card-text">Golden Star Dance Crew featuring Transmart Departement Store
                                     present “Hit The Stage with Golden Star” Dance Cover Competition.</p>
@@ -279,18 +299,43 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-        var warna = ["#e67e22", "#2980b9", "#d35400", "#2c3e50", "#16a085", "#c0392b", "#8e44ad"];
-        var katevent = $('.katevent');
-        for (var i = 0; i < katevent.length; i++) {
-            var random = Math.floor(Math.random() * 7);
-            $(katevent[i]).css('background', warna[random]);
-        }
-        var kartu = $('.kartu')
-        var collapse = $('.collapse');
-        for (var i = 0; i < kartu.length; i++) {
-            $(kartu[i]).attr('href', '#Event' + i)
-            $(collapse[i]).attr('id', 'Event' + i)
-        }
+        $(document).ready(function () {
+            var warna = ["#e67e22", "#2980b9", "#d35400", "#2c3e50", "#16a085", "#c0392b", "#8e44ad"];
+            var katevent = $('.katevent');
+            for (var i = 0; i < katevent.length; i++) {
+                var random = Math.floor(Math.random() * 7);
+                $(katevent[i]).css('background', warna[random]);
+            }
+            var kartu = $('.kartu')
+            var collapse = $('.collapse-ibra');
+            for (var i = 0; i < kartu.length; i++) {
+                $(kartu[i]).attr('href', '#Event' + i)
+                $(collapse[i]).attr('id', 'Event' + i)
+            }
+            var navitem = $('.nav-item')
+            for (var i = 0; i < navitem.length; i++) {
+                $(navitem[i]).click(function () {
+                var href = $(this).attr('href');
+                    console.log("Scroll to ", href)
+                    $('html, body').animate({
+                        scrollTop: $(href).offset().top - $("nav").outerHeight()
+                    }, 1000);
+                })
+            }
+        })
+
+        $(document).scroll(function () {
+            if ($(this).scrollTop() >= 100) {
+                $('.navbar').css('background', 'rgba(0,0,0,0.7')
+            } else {
+                $('.navbar').css('background', 'transparent')
+            }
+        })
+        $('.btn-jelajah').click(function () {
+            $('html, body').animate({
+                scrollTop: $("#grid-alam").offset().top - $("nav").outerHeight()
+            }, 1000);
+        })
     </script>
 </body>
 
