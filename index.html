@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/font/Montserrat.css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bebas" type="text/css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
     <script src="js/wow.min.js"></script>
@@ -148,8 +148,8 @@
         <h1 class="text-center">Event di Malang</h1>
         <h6 class="text-center" style="margin-bottom:2em">Ikuti Event Menarik di Malang </h3>
             <div class="container">
-                <div class="card-columns">
-                    <div class="card">
+                <div class="card-columns ">
+                    <div class="card wow fadeInDown">
                         <div class="katevent">job fair</div>
                         <div class="kartu" data-toggle="collapse">
                             <img src="images/Event/1.png" class="card-img-top" alt="...">
@@ -167,7 +167,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card wow fadeInDown">
                         <div class="katevent">lomba</div>
                         <div class="kartu" data-toggle="collapse">
                             <img src="images/Event/2.jpg" class="card-img-top" alt="...">
@@ -186,7 +186,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card wow fadeInDown">
                         <div class="katevent">seminar</div>
                         <div class="kartu" data-toggle="collapse">
                             <img src="images/Event/3.jpg" class="card-img-top" alt="...">
@@ -205,7 +205,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card wow fadeInDown">
                         <div class="katevent">lomba</div>
                         <div class="kartu" data-toggle="collapse">
                             <img src="images/Event/4.jpg" class="card-img-top" alt="...">
@@ -222,7 +222,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card wow fadeInDown">
                         <div class="katevent">job fair</div>
                         <div class="kartu" data-toggle="collapse">
                             <img src="images/Event/1.png" class="card-img-top" alt="...">
@@ -239,7 +239,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card wow fadeInDown">
                         <div class="katevent">lomba</div>
                         <div class="kartu" data-toggle="collapse">
                             <img src="images/Event/2.jpg" class="card-img-top" alt="...">
@@ -257,7 +257,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card wow fadeInDown">
                         <div class="katevent">seminar</div>
                         <div class="kartu" data-toggle="collapse">
                             <img src="images/Event/3.jpg" class="card-img-top" alt="...">
@@ -275,7 +275,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card wow fadeInDown">
                         <div class="katevent">lomba</div>
                         <div class="kartu" data-toggle="collapse">
                             <img src="images/Event/4.jpg" class="card-img-top" alt="...">
@@ -321,8 +321,13 @@
                     }, 1000);
                 })
             }
+            var cards = $('.card');
+            var s = 1;
+            for(var i = 0; i<cards.length; i++){
+                $(cards[i]).attr('data-wow-delay', s + 's')
+                s += .2
+            }
         })
-
         $(document).scroll(function () {
             if ($(this).scrollTop() >= 100) {
                 $('.navbar').css('background', 'rgba(0,0,0,0.7')
