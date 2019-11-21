@@ -144,6 +144,19 @@
         </div>
 
     </section>
+    <section id="about">
+        <div class="container">
+            <h1>About Malang</h1>
+            <div class="row">
+                <div class="col-5">
+                    <p>Kota terbesar kedua di Jawa Timur setelah Surabaya, dan kota terbesar ke-12 di Indonesia.
+                        Memiliki potensi wisata alam dan buatan yang memukau. Kota Malang, Kabupaten Malang dan Kota
+                        Batu biasa dikenal dengan Malang Raya.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="event">
         <h1 class="text-center">Event di Malang</h1>
         <h6 class="text-center" style="margin-bottom:2em">Ikuti Event Menarik di Malang </h3>
@@ -314,7 +327,7 @@
             var navitem = $('.nav-item')
             for (var i = 0; i < navitem.length; i++) {
                 $(navitem[i]).click(function () {
-                var href = $(this).attr('href');
+                    var href = $(this).attr('href');
                     console.log("Scroll to ", href)
                     $('html, body').animate({
                         scrollTop: $(href).offset().top - $("nav").outerHeight()
@@ -322,10 +335,10 @@
                 })
             }
             var cards = $('.card');
-            var s = 1;
-            for(var i = 0; i<cards.length; i++){
+            var s = 0;
+            for (var i = 0; i < cards.length; i++) {
                 $(cards[i]).attr('data-wow-delay', s + 's')
-                s += .2
+                s += .3
             }
         })
         $(document).scroll(function () {
