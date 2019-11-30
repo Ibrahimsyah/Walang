@@ -20,6 +20,10 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <a class="navbar-brand" href="#">walang</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link" href="#grid-alam">wisata <span class="sr-only">(current)</span></a>
@@ -144,11 +148,104 @@
         </div>
 
     </section>
+    <section id="kuliner">
+        <h1 class="text-center">Kuliner Malang</h1>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm6">
+                    <div class="card border-primary wow fadeInDown">
+                        <img src="./images/Rafly/bakso.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bakso</h5>
+                            <p class="card-text">Rasanya kurang lengkap jika berkunjung ke Kota Malang tetapi tidak
+                                mencicipi
+                                Bakso Malang. Bakso di Malang memiliki cita rasa yang khas dan beda dengan bakso di
+                                kota-kota
+                                lain. Kenikmatan Bakso Malang dapat bertambah jika dimakan di saat hujan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card border-primary wow fadeInDown">
+                        <img src="./images/Rafly/mendol.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mendol</h5>
+                            <p class="card-text">Tempe mendol merupakan makanan yang terbuat dari tempe kedelai yang
+                                berbentuk
+                                blok(mendol). Tempe mendol cocok sebagai pendamping nasi dan juga bisa menjadi jajanan
+                                biasa.
+                                Tempe mendol biasa dijumpai sebagai pelengkap nasi pecel</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card border-primary wow fadeInDown">
+                        <img src="./images/Rafly/ketan.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ketan Bubuk</h5>
+                            <p class="card-text">Ketan sangat cocok saat kamu sedang mencari makanan yang hangat dan
+                                manis.
+                                Ketan sendiri merupakan olahan beras ketan ditambah dengan kelapa parut atau bubuk.
+                                Banyak
+                                juga
+                                penjual yang menyajikan dengan berbagai rasa sesuai permintaan pembeli.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4 col-sm6">
+                    <div class="card border-primary wow fadeInDown">
+                        <img src="./images/Rafly/sate.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Sate Kelinci</h5>
+                            <p class="card-text">Kebanyakan sate terbuat dari ayam dan kambing. Tetapi sate yang satu
+                                ini
+                                berbeda, sate ini terbuat dari bahan dasar kelinci. Selain rasanya yang khas dan berbeda
+                                sate
+                                kelinci ini memiliki banyak khasiat yang cocok untuk kesehatan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="card border-primary wow fadeInDown">
+                        <img src="./images/Rafly/pecel.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Pecel</h5>
+                            <p class="card-text">Nasi pecel ini merupakan makanan favorit warga Malang. Nasi pecel ini
+                                terdiri
+                                dari rebusan sayuran segar, siraman bumbu kacang, dan peyek. Nasi pecel ini sangat cocok
+                                untuk
+                                sarapan dan pastinya sangat bergizi karena mengandung sayuran.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 wow fadeInDown">
+                    <div class="card border-primary">
+                        <img src="./images/Rafly/rawon.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Rawon</h5>
+                            <p class="card-text">Rawon merupakan makanan yang terdiri dari olahan daging sapi dengan
+                                kuah
+                                hitam
+                                yang memiliki rasa khas. Cita rasa rawon kurang lengkap jika belum ditambah sambal,
+                                kerupuk
+                                udang, dan telur asin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+    </section>
     <section id="about">
         <div class="container">
             <h1>About Malang</h1>
             <div class="row">
-                <div class="col-5">
+                <div class="col-md-5 col-sm-8">
                     <p>Kota terbesar kedua di Jawa Timur setelah Surabaya, dan kota terbesar ke-12 di Indonesia.
                         Memiliki potensi wisata alam dan buatan yang memukau. Kota Malang, Kabupaten Malang dan Kota
                         Batu biasa dikenal dengan Malang Raya.</p>
@@ -170,7 +267,6 @@
                                 <h6 class="tgl-event">24 - 25 Oktober 2019</h5>
                                     <h5 class="card-title">Job Fair XVII UB</h5>
                             </div>
-
                         </div>
                         <div class="collapse collapse-ibra">
                             <div class="card-body event-desc">
@@ -334,8 +430,14 @@
                     }, 1000);
                 })
             }
-            var cards = $('.card');
+            var cards = $('#kuliner .card');
             var s = 0;
+            for (var i = 0; i < cards.length; i++) {
+                $(cards[i]).attr('data-wow-delay', s + 's')
+                s += .3
+            }
+            s = 0;
+            cards = $('#event .card');
             for (var i = 0; i < cards.length; i++) {
                 $(cards[i]).attr('data-wow-delay', s + 's')
                 s += .3
@@ -343,7 +445,7 @@
         })
         $(document).scroll(function () {
             if ($(this).scrollTop() >= 100) {
-                $('.navbar').css('background', 'rgba(0,0,0,0.7')
+                $('.navbar').css('background', 'rgba(0,0,0,0.7)')
             } else {
                 $('.navbar').css('background', 'transparent')
             }
