@@ -13,11 +13,14 @@
 a.navbar-brand {
     font-size: 25px;
     margin-left: 50px;
+    font-size: 2em;
+    transition: 1s;
 }
 
 a.nav-item {
-    font-size: 17px;
+    font-size: 1em;
     margin-right: 30px;
+    transition: 1s;
 }
 
 .navbar-nav {
@@ -26,8 +29,12 @@ a.nav-item {
 
 .jumbotron {
     min-height: 100vh;
-    background-image: url("../images/BGjumbo.jpg");
+    background: rgba(0, 0, 0, 0.6);
     margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .container-wahyu {
@@ -89,13 +96,89 @@ a.nav-item {
     font-size: 2em
 }
 
+/* Non Alam */
+
+#non-alam .carousel-item::before {
+    background-image: url('../images/azhari/Layer.svg');
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-size: cover;
+}
+
+#non-alam img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+#non-alam .content {
+    padding: 2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+}
+
+#non-alam .judul {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8em;
+    color: #00D6FF;
+}
+
+#non-alam .desc {
+    font-size: 1.5em;
+}
+
+#non-alam button {
+    float: right;
+    margin-right: 50px;
+    border: 2px solid #00D6FF;
+    background: transparent;
+    color: #00D6FF;
+    font-size: 1.25em;
+    border-radius: 20px;
+}
+
+#non-alam img::before {
+    content: '';
+    position: absolute;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    bottom: 0;
+    top: 80%;
+}
+
+@media (max-width: 992px) {
+    #non-alam .content {
+        position: relative;
+    }
+    #non-alam .carousel-item::before {
+        background: rgba(0, 0, 0, 0.6);
+    }
+    #non-alam {
+        background: black;
+    }
+    .carousel-control-prev, .carousel-control-next {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+    }
+}
+
+/* End Non Alam */
+
 .arrow {
     color: white;
     float: right;
     font-size: 3em;
 }
 
-#event, #kuliner{
+#event, #kuliner {
     background: #e6e6e6;
     padding-top: 2em;
 }
@@ -132,8 +215,9 @@ a.nav-item {
 .event-desc {
     padding-top: 0;
 }
-#about{
-    min-height: 90vh;
+
+#about {
+    min-height: 100vh;
     width: 100%;
     background: url("../images/About.jpg");
     background-size: cover;
@@ -144,7 +228,8 @@ a.nav-item {
     color: white;
     position: relative;
 }
-#about::before{
+
+#about::before {
     content: '';
     position: absolute;
     top: 0;
@@ -153,18 +238,20 @@ a.nav-item {
     width: 100%;
     height: 100%;
 }
-#about h1{
+
+#about h1 {
     text-transform: uppercase;
-    font-size:3em;
+    font-size: 3em;
     font-weight: bold;
     margin-bottom: 1em;
     position: relative;
 }
-#about p{
-    font-size:1.25em;
+
+#about p {
+    font-size: 1.25em;
 }
+
 @media (min-width: 576px) {
-    
     .card-columns {
         column-count: 2;
     }
@@ -174,7 +261,6 @@ a.nav-item {
     .card-columns {
         column-count: 3;
     }
-
 }
 
 @media (min-width: 992px) {
@@ -182,8 +268,9 @@ a.nav-item {
         column-count: 4;
     }
 }
-@media (max-width: 760px){
-    .container-wahyu h1{
+
+@media (max-width: 760px) {
+    .container-wahyu h1 {
         font-size: 2.4em;
     }
 }

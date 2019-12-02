@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1081" viewBox="0 0 1920 1081">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.22;
+      }
+
+      .cls-2 {
+        opacity: 0.97;
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" y1="0.445" x2="0.853" y2="0.455" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.577" stop-color="#030101" stop-opacity="0.576"/>
+      <stop offset="1" stop-color="#030000"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_113" data-name="Group 113" transform="translate(-19574 -5170)">
+    <rect id="Rectangle_96" data-name="Rectangle 96" class="cls-1" width="1920" height="1080" transform="translate(19574 5171)"/>
+    <rect id="Rectangle_94" data-name="Rectangle 94" class="cls-2" width="756" height="1080" transform="translate(20224 5170)"/>
+    <rect id="Rectangle_95" data-name="Rectangle 95" width="546" height="1080" transform="translate(20948 5170)"/>
+  </g>
+</svg>
