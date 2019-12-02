@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/font/Montserrat.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bebas" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/article.css">
+    <title>Halaman Artikel</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="./js/article.js"></script>
+</head>
+
+<body>
+    <section id="article">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="judul text-center">JUDUL article</h1>
+
+            </div>
+            <br>
+        </div>
+        <div class="container">
+            <div class="content">
+                Untuk membuka halaman ini, silahkan pilih salah satu item pada <a href="./index.html"> Halaman depan
+                    website walang </a>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        Copyright 2019. Made with <i class="fa fa-heart" style="color: red"></i> By Walang Team
+    </section>
+    <script>
+        var params = new URLSearchParams(window.location.search)
+        var id = params.get('id');
+        console.log(article[id].content)
+        window.document.title = article[id].title
+        $('.judul').html(article[id].title)
+        $('.content').html(article[id].content)
+        var img = $('img')
+        $('.jumbotron').css('background', 'url(' + img[0].src + ')')
+        $('.jumbotron').css('background-size', 'cover')
+    </script>
+</body>
+
+</html>
