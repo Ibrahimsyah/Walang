@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <div class="loader"></div>
     <section id="article">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
@@ -45,6 +46,9 @@
         var img = $('img')
         $('.jumbotron').css('background', 'url(' + img[0].src + ')')
         $('.jumbotron').css('background-size', 'cover')
+        $(document).ready(function(){
+            $('.loader').fadeOut(1000)
+        })
     </script>
 </body>
 
